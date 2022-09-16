@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Registration With Validation</title>
-  </head>
-<style>
-  input#name:invalid:focus{
-  border:1px solid red;
-  }
-  </style>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        input#name:invalid:focus{
+            border:3px solid red;
+        }
+        input#email:invalid:focus{
+            border:3px solid red;
+        }
+        input#password:invalid:focus{
+            border:3px solid red;
+        }
+        input#dob:invalid:focus{
+            border:3px solid red;
+        }
+    </style>
+</head>
 <body>
-   <div>
-  <form id="user-form">
-   <label for="name">Name</label>
-   <input required type="text" id="name" name="name">
-<br>
-   <label for="email">Email</label>
-   <input required type="email" id="email" name="email">
-<br>
-   <label for="password">Password</label>
-   <input required type="password" id="password" name="password">
-<br>
-   <label for="dob">Date of Birth</label>
-   <input required type="date" id="dob" name="dob" value=Date()>
-   
-<br>
-   <input  type="checkbox" id="acceptTerms" name="acceptTerms">
-   <label for="acceptTerms">Accept Terms & Conditions</label>
-<br>
-   <button type="submit">Submit</button>
-</form>
-</div>
-          
-  
-  <div
-  class="relative bg-white px-6 mt-5 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:rounded-lg sm:px-10">
-<div class="mx-auto">
-    <h2 class="text-3xl text-center font-bold leading-tight">Entries</h2>
-    <div class="divide-y divide-gray-300/50" id="user-entries"></div>
-</div>
-<script src="validation.js"></script>
-</body>
 
+   <div>
+    <form id="t1">
+        <h2 id="j1"> Registration Form</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter full name" required >
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <div id="c1">
+            <input type="checkbox" id="acceptTerms" name="acceptTerms">&nbsp;
+            <label for="acceptTerms">Accept Terms and Conditions</label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+
+    <div id="table-box">
+        <h1>Entries</h1>
+        <table id="user-table">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Dob</th>
+            <th>Accepted terms?</th>
+            </tr>
+        </table>
+      </div>
+  </div>
+
+
+    <script src="validation.js"></script>
+
+
+</body>
 </html>
