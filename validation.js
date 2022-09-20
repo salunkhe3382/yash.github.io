@@ -1,4 +1,4 @@
-function ValidateEmail(email) 
+function ValidateEmail(Email) 
 {
  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
   {
