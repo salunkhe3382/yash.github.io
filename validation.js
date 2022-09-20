@@ -1,22 +1,24 @@
-function ValidateEmail(Email) 
+const email=document.getElementById('email');
+email.addEventListener('input',()=> verifyemail(email));
+function ValidateEmail(email)
 {
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
-  {
-    return (true)
-  }
-    alert("You have entered an invalid email address!")
-    return (false)
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(email.value.match(mailformat))
+{
+alert("Valid email address!");
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.form1.text1.focus();
+return false;
+}
 }
 
-function Validate(ele){
-    if (ele.validity.typeMismatch){
-        ele.setCustomValidity("enter Email in right format");
-        ele.reportValidity();
-    }
-    else{
-        ele.setCustomValidity("");
-    }
-}
+
+   
 
 const dob=document.getElementById('dob');
 dob.addEventListener('input',()=> verifydob(dob));
