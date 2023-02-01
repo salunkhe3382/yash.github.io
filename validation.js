@@ -2,7 +2,7 @@ const email=document.getElementById('email');
 email.addEventListener('input',()=> verifyemail(email));
 function ValidateEmail(email)
 {
-var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+var mailformat = /^\[A-Z0-9._%+-]+@[pccoepune]+\.[org]+$/;
 if(email.value.match(mailformat))
 {
 alert("Valid email address!");
